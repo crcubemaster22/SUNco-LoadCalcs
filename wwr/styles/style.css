@@ -15,13 +15,14 @@ h2 {
 }
 #logo_link {
     padding-top: 5px;
+    
 }
 nav a {
     text-align:center;
     background-color: #63767a;
     color: white;
     text-decoration: none;
-    padding: 35px;
+    padding: 35px;    
 }
 #hero-msg h1, #hero-msg h4 {
     text-align: center;
@@ -107,6 +108,7 @@ nav a:hover {
 }
 .main_logo {
     width: 100px;
+   
 }
 .icon {
     padding-top: 10px;
