@@ -19,3 +19,18 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+body {
+    font-family: 'Quesha-gndR';
+}
+.yes {
+    display: block;
+    margin: 0 auto;
+}
+
+@font-face {
+    font-family: "Quesha-gndR";
+    src: url('Quesha-gndR.ttf');
+}
+div {
+    font-family: 'Michroma', sans-serif;
+}
