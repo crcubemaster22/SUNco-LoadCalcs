@@ -23,7 +23,6 @@ nav {
     justify-content: space-around;
     align-content: center;
     height: 70px;
-    
 }
 nav a {
     text-align:center;
@@ -125,7 +124,7 @@ nav a:hover {
 }
 .msg h2 {
     color: white;
-    font-family: "Saira Condensed";    
+    font-family: "Saira Condensed";
 }
 .msg p {
     color: white;
@@ -217,7 +216,7 @@ main section img {
         font-size: 25px;
         color: #6f7364;
     }
-    .rivers-card, .camping-card, .rapids-card { 
+    .rivers-card, .camping-card, .rapids-card {
         margin: 50px auto;
         width: 60%;
     }
@@ -232,4 +231,107 @@ main section img {
     footer {
         margin-top: 25px;
     }
+}
+#main-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+.left-side {
+    grid-column: 2/6;
+
+}
+.message-box {
+    grid-column: 8/12;
+    width: 100%;
+    background-color:#cad9d6;
+    width: 100%;
+    height: 90%;
+    margin-top: 15px;
+    border-radius: 1em;
+    padding: 20px;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+.message {
+    width: 100%;
+    text-align: left;
+    padding: 20px 20px 20px 20px;
+}
+.message h4 {
+    padding-bottom: 5px;
+}
+#email-text {
+    width: 90%;
+    height: 70px;
+    border-radius: .5em;
+    margin-bottom: 20px;
+    border: none;
+}
+
+#name, #email, #subject {
+    width: 90%;
+    height: 30px;
+    border-radius: .5em;
+    line-height: 1.5em;
+    margin-bottom: 10px;
+    border: none;
+}
+.message h2 {
+    margin-bottom: 20px;
+    color: #63767a;
+}
+.message p {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #63767a;
+}
+.submit-button {
+    background-color: #63767a;
+    text-decoration: none;
+    padding: 10px 10px;
+    border-radius: .5em;
+    color: white;
+}
+.submit-button:hover {
+    background-color: #c28b7c;
+}
+
+/* #c28b7c */
+#subject {
+    margin-bottom: 20px;
+}
+.contact-us h4 {
+    display: inline-block;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    grid-column: 3/5;
+}
+.phone, .email, .location {
+    margin-right: 10px;
+    border-radius: 50%;
+    border: 2px solid black;
+    padding: 3px;
+    width: 30px;
+}
+.simple-line {
+    background-color: black;
+    width: 100%;
+    height: 1px;
+}
+.contact-us {
+    text-align: center;
+}
+.contact-us h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.left-side h1 {
+    margin-bottom: 50px;
+    margin-top: 100px;
+}
+.contact-us h4 {
+    font-size: 15px;
 }
