@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Alegreya&family=Alegreya+SC&family=Roboto+Slab:wght@700&display=swap');
+
+.main-content {
+    background-color: white;
+    width: 300px;
+    height: 550px;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+.box {
+    /* grid-column: 2/3; */
+    background-color: black;
+    width: 500px;
+}
+.main-img {
+    grid-column: 2/3;
+}
+.bridge {
+    width: 300px;
+    margin: 0 auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+p, h1, h6{
+    text-align: center;
+    padding: 0 40px;
+}
+h1 {
+    line-height: 2px;
+    font-family: 'Roboto Slab', serif;
+}
+p {
+    margin-top: 40px;
+    line-height: 20px;
+    color: #3e3e3e;
+}
+h4 {
+    margin-top: 10px;
+    text-align: center;
+    color: #3e3e3e;
+}
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 75px;
+}
+.left {
+    grid-column: 1/2;
+    background-color: #405ca9;  
+    border-bottom-left-radius: 20px;  
+    text-align: center;
+    line-height: 5px;
+    color: white;
+}
+.middle {
+    grid-column: 2/3;
+    text-align: center;
+    line-height: 5px;
+    background-color: #405ca9; 
+    border-right: 1px solid white; 
+    border-left: 1px solid white; 
+    color: white;
+}
+.right {
+    grid-column: 3/4;
+    text-align: center;
+    line-height: 5px;
+    border-bottom-right-radius: 20px; 
+    background-color: #405ca9;  
+    color: white;
+}
+body {
+    background-color: black;
+}

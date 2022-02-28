@@ -40,6 +40,9 @@ nav a {
     text-decoration: none;
     align-self: center;
 }
+nav a:hover {
+    color: #6C757D;
+}
 #main-img {
     width: 100%;
     margin-top: -335px;
@@ -199,20 +202,53 @@ img {
     grid-row: 2/4;
     text-align: center;
 }
+/* .mission-box-1 p, .mission-box-2 p, .mission-box-3 p {
+    /* font-family: Abel;
+} */
 
 /* Footer */
 footer {
     background-color: #6C757D;
-    display: flex;
-    justify-content: space-around;
+}
+#footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
 }
 .social { 
-    display: flex;
-    justify-content: space-around;
-    height: 100px;
-    width: 100px;
-    margin: auto 0;
-    margin-top: 30px;
+    grid-column: 1/4;
+    margin: auto auto;
+    padding: 0 300px;
+    text-decoration: none;
+    
+}
+.footer-left {
+    grid-column: 1/2;
+    text-align: center;
+    margin: auto auto;
+}
+.footer-middle {
+    grid-column: 2/3;
+    text-align: center;
+    margin: auto auto;
+}
+.footer-middle a {
+    text-decoration: none;
+    color: #000;
+    padding: 15px;
+}
+.footer-right {
+    grid-column: 3/4;
+    text-align: center;
+    margin: auto auto;
+}
+.ig-icon img, .fb-icon img {
+    width: 30px;
+}
+.footer-left a, .footer-right a {
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
 }
 
 
@@ -271,9 +307,11 @@ footer {
 }
 .shamie-section p {
     font-size: 18px;
+    font-family: Abel;
 }
 .oscar-section p {
     font-size: 18px;
+    font-family: Abel;
 }
 .underline-coaches {
     grid-column: 2/5;
@@ -295,8 +333,67 @@ footer {
     box-shadow: 5px 5px 10px 0px grey;
     text-decoration: none;
     color: black;
+    font-family: Abel;
 
 }
 .coaches-learn-button:hover {
     background-color: #6C757D;
+}
+/* About Us Main Image */
+#mtn-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-top: 100px;
+}
+.mtn-grid {
+    grid-column: 2/3;
+    grid-row: 1;
+}
+.about-message {
+    grid-column: 1/2;
+    grid-row: 1;
+    padding-left: 80px;
+    margin-top: 140px;
+}
+/* Grid for About us and Goals */
+#about-us-main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px 350px;
+}
+/* About Us What we do */
+.desk-img {
+    grid-column: 2/7;
+    grid-row: 2/6;
+}
+.what-do {
+   grid-column: 8/12;
+   grid-row: 2/6; 
+}
+.desk-background {
+    grid-column: 1/13;
+    grid-row: 1/8;
+    z-index: -1;
+    background-color: #6C757D;
+}
+.small-box {
+    grid-column: 3/11;
+    grid-row: 7/9;
+    text-align: center;
+    margin: auto auto;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #ADB5BD;
+}
+.left-goals {
+    grid-column: 2/7;
+    grid-row: 9/10;
+    border-right: 1px solid black;
+    line-height: 3em;
+}
+.right-goals {
+    grid-column: 8/12;
+    grid-row: 9/10;
+    line-height: 3em;
 }
