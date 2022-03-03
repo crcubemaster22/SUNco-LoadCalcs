@@ -209,46 +209,36 @@ img {
 /* Footer */
 footer {
     background-color: #6C757D;
-}
-#footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
-}
-.social { 
-    grid-column: 1/4;
-    margin: auto auto;
-    padding: 0 300px;
-    text-decoration: none;
-    
-}
-.footer-left {
-    grid-column: 1/2;
     text-align: center;
-    margin: auto auto;
 }
-.footer-middle {
-    grid-column: 2/3;
-    text-align: center;
-    margin: auto auto;
+/* logo */
+.footer-logo {
+    padding-top: 35px;
 }
-.footer-middle a {
-    text-decoration: none;
-    color: #000;
-    padding: 15px;
-}
-.footer-right {
-    grid-column: 3/4;
-    text-align: center;
-    margin: auto auto;
-}
-.ig-icon img, .fb-icon img {
-    width: 30px;
-}
-.footer-left a, .footer-right a {
-    font-size: 20px;
-    padding: 20px;
+.footer-logo a {
     text-decoration: none;
     color: black;
+    font-size: 25px;
+}
+/* Pages */
+.footer-middle a {
+    text-decoration: none;
+    color: black;
+    padding: 0 5px;
+    font-size: 15px;
+    font-family: Abel;
+}
+/* social links */
+.footer-bottom {
+    padding-top: 5px;
+    padding-bottom: 35px;
+}
+.footer-bottom a {
+    width: 10px;
+    text-decoration: none;
+}
+.ig-icon img, .fb-icon img{
+    width: 20px;
 }
 
 
@@ -344,7 +334,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    margin-top: 100px;
+    margin-top: 125px;
 }
 .mtn-grid {
     grid-column: 2/3;
@@ -360,7 +350,7 @@ footer {
 #about-us-main {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px 350px;
+    grid-template-rows: 70px 70px 70px 70px 70px 70px 70px 70px 40px 350px;
 }
 /* About Us What we do */
 .desk-img {
@@ -371,6 +361,14 @@ footer {
    grid-column: 8/12;
    grid-row: 2/6; 
 }
+.what-do p {
+    font-size: 18px;
+    color: white;
+    font-family: Abel;
+}
+.what-do h1 {
+    color: white;
+}
 .desk-background {
     grid-column: 1/13;
     grid-row: 1/8;
@@ -378,22 +376,81 @@ footer {
     background-color: #6C757D;
 }
 .small-box {
-    grid-column: 3/11;
-    grid-row: 7/9;
+    grid-column: 1/13;
+    display: inline-block;
     text-align: center;
     margin: auto auto;
-    padding-left: 50px;
-    padding-right: 50px;
-    background-color: #ADB5BD;
+    width: 100%;
 }
+/* .small-box h2 {
+    text-decoration: underline;
+} */
 .left-goals {
     grid-column: 2/7;
-    grid-row: 9/10;
+    grid-row: 10/11;
     border-right: 1px solid black;
-    line-height: 3em;
+    line-height: 2em;
 }
 .right-goals {
     grid-column: 8/12;
-    grid-row: 9/10;
-    line-height: 3em;
+    grid-row: 10/11;
+    line-height: 2em;
+}
+.right-goals li, .left-goals li {
+    font-size: 18px;
+    font-family: Abel;
+}
+/* Section 4 of About US */
+#section_4 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* grid-template-rows: 75px 75px 75px 75px 75px 75px 75px 75px; */
+    grid-template-rows: repeat(8, 1fr);
+
+}
+.section-4-background {
+    background-color: #ADB5BD;
+    grid-column: 1/13;
+    grid-row: 1/9;
+}
+.section-4-img {
+    grid-column: 2/8;
+    grid-row: 2/8;
+}
+.section-4-textbox {
+    grid-column: 6/12;
+    grid-row: 3/7;
+    background-color: #6C757D;
+    box-shadow: 0px 0px 10px #6C757D;
+}
+.section-4-textbox h2 {
+    text-align: center;
+    padding: 0px 30px 0 30px;
+    font-size: 30px;
+    color: white;
+}
+.section-4-textbox p {
+    text-align: center;
+    font-size: 15px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    padding: 0px 30px 0px 30px;
+    color: white;
+    font-family: Abel;
+}
+.apt-button{
+    text-align: center;
+}
+.page2-apt-button {
+    text-decoration: none;
+    color: white;
+    background-color: #6C757D;
+    padding: 5px 15px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px silver;
+    font-family: Abel;
+}
+.page2-apt-button:hover {
+    background-color: #ADB5BD;
+    color: black;
 }
