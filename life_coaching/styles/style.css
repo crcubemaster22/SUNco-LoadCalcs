@@ -241,7 +241,6 @@ footer {
     width: 20px;
 }
 
-
 /* Profiles */
 .shamie-photo {
     border-radius: 50%;
@@ -453,4 +452,99 @@ footer {
 .page2-apt-button:hover {
     background-color: #ADB5BD;
     color: black;
+}
+
+/*
+
+
+
+COACHES PAGE
+
+Main grids*/
+
+#oscar-grid {
+    display: grid;
+    grid-template-columns: 30px repeat(12, 1fr) 30px;
+}
+.coaches-header {
+    grid-column: 2/14;
+    text-align: center;
+}
+#shamie-grid {
+    display: grid;
+    grid-template-columns: 30px repeat(12, 1fr) 30px;
+}
+.contacts a {
+    text-decoration: none;
+    font-family: Abel;
+    color: black;
+    font-size: 15px;
+}
+.contacts a:hover {
+    color: #ADB5BD;
+}
+.contact-info h5 {
+    font-family: Abel;
+}
+
+/* Oscar Section */
+.oscar-profile-photo {
+    grid-column: 2/5;
+}
+.contact-info {
+    grid-column: 6/14;
+    margin: auto 0;
+}
+.oscar-about-me {
+    width: 50%;
+    padding: 0 50px;
+    border-right: 1px solid black;
+}
+.oscar-unknown {
+    width: 50%;
+    padding: 0 50px;
+}
+.oscar-split {
+    display: flex;
+}
+.contact-info h3, .contact-info h5, .contact-info a {
+    margin: 0;
+    align-items: bottom;
+}
+
+.coaches-divider {
+    width: 1000px;
+    height: 1px;
+    background-color: black;
+    margin: 30px auto;
+    
+}
+
+/* Shamie Section */
+.shamie-profile-photo {
+    grid-column: 2/5;
+}
+.contact-info {
+    grid-column: 6/14;
+}
+.shamie-split {
+    display: flex;
+}
+.shamie-about-me {
+    width: 50%;
+    padding: 0 50px;
+    border-right: 1px solid black;
+    margin-bottom: 20px;
+}
+.shamie-unknown {
+    width: 50%;
+    padding: 0 50px;
+    margin-bottom: 20px;
+}
+.profile-img {
+    width: 300px;
+    height: auto;
+    background-color: grey;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px 0px grey;
 }
