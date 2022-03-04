@@ -215,6 +215,9 @@ footer {
 .footer-logo {
     padding-top: 35px;
 }
+.footer-logo a:hover {
+    color: white;
+}
 .footer-logo a {
     text-decoration: none;
     color: black;
@@ -227,6 +230,9 @@ footer {
     padding: 0 5px;
     font-size: 15px;
     font-family: Abel;
+}
+.footer-middle a:hover {
+    color: white;
 }
 /* social links */
 .footer-bottom {
@@ -316,17 +322,17 @@ footer {
     margin: 0 auto;
 }
 .coaches-learn-button {
-    background-color: #ADB5BD;
     padding: 5px 10px;
-    border-radius: 3px;
-    box-shadow: 5px 5px 10px 0px grey;
     text-decoration: none;
     color: black;
     font-family: Abel;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px black;
 
 }
 .coaches-learn-button:hover {
-    background-color: #6C757D;
+    background-color: #ADB5BD;
 }
 /* About Us Main Image */
 #mtn-box {
@@ -440,18 +446,17 @@ footer {
 .apt-button{
     text-align: center;
 }
+.apt-button:hover {
+    transform: scale(1.1);
+}
 .page2-apt-button {
     text-decoration: none;
     color: white;
-    background-color: #6C757D;
     padding: 5px 15px;
-    border-radius: 3px;
-    box-shadow: 0px 0px 10px silver;
     font-family: Abel;
-}
-.page2-apt-button:hover {
     background-color: #ADB5BD;
-    color: black;
+    border-radius: 20px;
+    box-shadow: 2px 2px 6px black;
 }
 
 /*
@@ -460,153 +465,134 @@ footer {
 
 COACHES PAGE
 
-Main grids*/
-
-#oscar-grid {
+/* Both Sections*/
+#coaches-container {
     display: grid;
-    grid-template-columns: 30px repeat(12, 1fr) 30px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 50px;
 }
 .coaches-header {
-    grid-column: 2/14;
+    grid-column: 1/13;
+    grid-row: 1/2;
+    place-self: center center;
+}
+.profile-photo, .profile-photo-1 {
+    place-self: center center;
+    margin-left: 20px;
+}
+.name-position, .name-position-1 {
+    place-self: center center;
+    margin: 0 50px 0 0;
     text-align: center;
 }
-#shamie-grid {
-    display: grid;
-    grid-template-columns: 30px repeat(12, 1fr) 30px;
+.contact-info, .contact-info-1 {
+    font-size: 18px;
+    margin: 0 0 0 0;
 }
-.contacts a {
-    text-decoration: none;
+.con-list {
+    list-style-type: none;
     font-family: Abel;
+}
+.phone-number, .email-link, .fb-link, .ig-link {
+    text-decoration: none;
     color: black;
-    font-size: 15px;
 }
 .phone-number:hover, .email-link:hover, .fb-link:hover, .ig-link:hover {
-    color: #ADB5BD;
+    color: grey;
 }
-
-.contact-info h5 {
-    font-family: Abel;
-}
-.contacts {
-    margin-top: 30px;
-}
-/* Oscar Section */
-.oscar-profile-photo {
-    grid-column: 2/5;
-}
-.contact-info {
-    grid-column: 6/14;
-    margin: auto 0;
-}
-.oscar-about-me {
-    width: 50%;
-    padding: 0 50px;
-    border-right: 1px solid black;
-}
-.oscar-unknown {
-    width: 50%;
-    padding: 0 50px;
-}
-.oscar-split {
-    display: flex;
-}
-.contact-info h3, .contact-info h5, .contact-info a {
-    margin: 0;
-    align-items: bottom;
-}
-
-.coaches-divider {
-    width: 1000px;
-    height: 1px;
+.contact-info-underline {
     background-color: black;
-    margin: 30px auto;
-    
-}
-
-/* Shamie Section */
-.shamie-profile-photo {
-    grid-column: 2/5;
-}
-.contact-info {
-    grid-column: 6/14;
-    text-align: center;
-    margin: auto auto;
-}
-.shamie-split {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr 1fr;
-}
-.shamie-about-me {
-    grid-column: 2/3;
-    grid-row: 1/2;
-    padding: 0 50px;
-    border-right: 1px solid black;
-    margin-bottom: 20px;
-}
-.contacts1 {
-    grid-column: 1/2;
-    grid-row: 1/3;
+    height: 1px;
+    width: 150px;
     margin: 0 auto;
-    margin-top: 50px;
 }
-.shamie-unknown {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    padding: 0 50px;
-    margin-bottom: 20px;
+.about-me, .about-me-1 {
+    margin: 0 50px 0 0;
 }
-.profile-img {
-    width: 300px;
-    height: auto;
+.about-me p, .about-me-1 p {
+    font-family: Abel;
+    font-size: 15px;
+}
+.credentials, .credentials-1 {
+    margin: 0 50px 0 0;
+    padding: 0 0 20px 0;
+}
+.cred-list {
+    font-family: Abel;
+    font-size: 15px;
+}
+#coaches-container img {
+    height:auto;
+    width: 200px;
     background-color: grey;
     border-radius: 50%;
     box-shadow: 5px 5px 10px 0px grey;
 }
-
-a.msg-me-button {
-    background-color: #ADB5BD;
-    padding: 5px 15px;
+.msg-btn {
+    text-align: center;
+    margin: 50px 30px 0 30px;
+    padding: 5px;
+    background-color: white;
     border-radius: 20px;
     box-shadow: 2px 2px 6px black;
-    margin-top: 500px;
-}
-.msg-me-button:hover {
-    background-color: #6C757D;
-    color: black;
-}
-.contacts1 a {
-    text-decoration: none;
-    font-family: Abel;
-    color: black;
-    font-size: 20px;
-    margin-top: 800px;
-}
-.contacts1 {
-    list-style-type: none;
-}
-.ig-link {
-    padding: 100px 0;
-}
-.contacts1 li {
-    padding: 10px 0;
-}
-.contacts1 li a {
-    margin-top: 500px;
-}
-.msg-me {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    list-style-type: none;
-    margin: 100px auto 0 auto;
-    border-top: 1ps solid black;
 }
 .msg-me-button {
-    color: black;
     text-decoration: none;
+    color: black;
+    font-family: Abel;
 }
-.contact-info-underline {
-    height: 1px;
+.msg-btn:hover {
+    transform: scale(1.1);
+}
+.coaches-divider {
     background-color: black;
-    width: 350px;
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+    grid-column: 1/13;
+    grid-row: 5/6;
+}
+/* Oscar's Section*/
+.profile-photo {
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+.name-position {
+    grid-column: 4/13;
+    grid-row: 2/3;
+}
+.contact-info {
+    grid-column: 1/4;
+    grid-row: 3/5;
+}
+
+.about-me {
+    grid-column: 4/13;
+    grid-row: 3/4;
+}
+.credentials {
+    grid-column: 4/13;
+    grid-row: 4/5;
+}
+/* Shamie's Section*/
+.profile-photo-1 {
+    grid-column: 1/4;
+    grid-row: 6/7;
+}
+.name-position-1 {
+    grid-column: 4/13;
+    grid-row: 6/7;
+}
+.contact-info-1 {
+    grid-column: 1/4;
+    grid-row: 7/9;
+}
+
+.about-me-1 {
+    grid-column: 4/13;
+    grid-row: 7/8;
+}
+.credentials-1 {
+    grid-column: 4/13;
+    grid-row: 8/9;
 }
