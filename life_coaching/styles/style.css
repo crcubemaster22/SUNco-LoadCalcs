@@ -45,7 +45,8 @@ nav a:hover {
 }
 #main-img {
     width: 100%;
-    margin-top: -300px;
+    margin-top: -600px;
+    margin-bottom: 50px;
     z-index: -1;
     grid-column: 1/13;
     grid-row: 1/7;
@@ -70,9 +71,9 @@ img {
 .main-message {
     width: 400px;
     height: 250px;
-    grid-column: 2/5;
+    grid-column: 9/12;
     grid-row: 1/4;
-    margin: 100px 0 0 0;
+    margin: 70px 0 0 0;
     /* background-color: rgba(173, 181, 189, 0.5); */
     text-align: center;
 }
