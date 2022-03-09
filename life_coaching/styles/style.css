@@ -634,3 +634,160 @@ COACHES PAGE
 .msg1-btn:hover {
     transform: scale(1.1);
 }
+@media only screen and (max-width: 600px) {
+    header {
+      /* display: none; */
+    }
+    #mtn-box {
+        display: inline-block;
+    }
+    #mtn-box img {
+        margin: -30px 0 0 0;
+    }
+    .mtn-grid {
+        grid-column: 1/2;
+        margin-top: -100px;
+        width: 100%;
+        justify-items: center;
+    }
+    .about-message {
+        grid-column: 1/2;
+        justify-items: center;
+        text-align: center;
+        margin: -10px 12% 40px 12%;
+        padding: 0px;
+    }
+    .about-message p {
+        font-size: 18px;
+    }
+    .about-message h1 {
+        font-size: 27px;
+    }
+    .desk-img {
+        display: none;
+    }
+    #about-us-main {
+        display: inline-block;
+        width: 100%;
+        background-color: none;
+
+    }
+    .what-do {
+        background-color: #6C757D;
+        margin: 0 15px 0 15px;
+    }
+    .what-do h1 {
+        grid-column: 1/2;
+        font-size: 27px;
+        text-align: center;
+        margin: 0 auto 0 auto;
+        padding: 15px 0 0 0;
+    }
+    .what-do p {
+        grid-column: 1/2;
+        font-size: 16px;
+        margin: 0 10px 0 10px;
+        padding: 10px 30px 30px 30px;
+        text-align: center;
+
+    }
+    #section_4 {
+        display: inline-block;
+        /* height: 1200px; */
+        margin: 0 0 100px 0;
+    }
+    .small-box {
+        margin: 25px 0 0 0;
+    }
+    .small-box h2 {
+        font-size: 27px;
+    }
+    .right-goals {
+        margin: 0 auto 0 auto;
+        width: 80%;
+    }
+    .left-goals {
+        margin: 0 auto 0 auto;
+        width: 80%;
+        border-right: none;
+    }
+    .section-4-background {
+        display: none;
+    }
+    .section-4-img {
+        display: none;
+    }
+    .section-4-textbox {
+        grid-column: 2/10;
+        margin: 0 15px 0 15px;
+    }
+    .section-4-textbox h2 {
+        padding: 20px 0 0 0;
+    }
+    .section-4-textbox p {
+        padding: 0 20px 0 20px;
+    }
+    
+    /* COACHES PAGE */
+    #coaches-container {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+    }
+    .coaches-header {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .coaches-header h1 {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .profile-photo {
+        margin-left: 0;
+        padding: 0 0 0 0;
+    }
+    #coaches-container img {
+        margin: auto;
+        display: block;
+        width: 50%;
+    }
+    .name-position {
+        display: block;
+        margin: 20px 25% 0 25%;
+        padding: 0 0 0 0;
+    }
+    .con-list {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+        text-align: center;
+    }
+    .contact-info {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+    }
+    .name-position, .name-position-1 {
+        margin: 0 0 0 0;
+        padding: 0 0 0 0;
+    }
+    .msg-me-button {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+    } 
+    .msg-btn {
+        width: 200px;
+        padding: 5px 0 5px 0;
+        justify-items: center center;
+        margin: 10px auto 0 auto;
+    }
+    .about-me, .about-me-1 {
+        margin: 0 40px 0 40px;
+    }
+    .credentials, .credentials-1 {
+        margin: 0 40px 0 40px;
+    }
+    .pricing, .pricing1 {
+        margin: 0 40px 0 40px;
+    }
+  }

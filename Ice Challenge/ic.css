@@ -1,0 +1,62 @@
+.challenge-1 h1 {
+    text-align: center;
+}
+.img {
+    text-align: center;
+    padding: 20px
+}
+.img img {
+    width: 50px;
+}
+.challenge-2 img {
+    width: 25%;
+    text-align: center;
+}
+.img-2 {
+    text-align: center;
+    margin-top: 50px;
+}
+.challenge-2 h1, p {
+    text-align: center;
+}
+.button {
+    background-color: #4682d5;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+}
+.btn {
+    text-align: center;
+    margin: 25px 0 25px 0;
+}
+.underline {
+    background-color: grey;
+    height: 1px;
+    width: 200px;
+    margin: 0 auto;
+}
+.issues {
+    text-align: center;
+    padding: 10px;
+}
+.challenge-3 h1 {
+    text-align: center;
+}
+.img-3 {
+    text-align: center;
+    padding-top: 30px;
+}
+.button-2 {
+    background-color: grey;
+    padding: 10px 25px;
+    text-decoration: none;
+    color: white;
+    border-radius: 3px;
+}
+.challenge-4 h1 {
+    text-align: center;
+}
+.challenge-4 p a {
+    color: blue;
+}
