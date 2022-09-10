@@ -1,0 +1,665 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #2c2c2c;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+}
+
+#wrapper {
+  display: flex;
+}
+
+.heading {
+  position: fixed;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+  padding-left: 20px;
+  background-color: #2c2c2c;
+}
+
+.headingWrap {
+  background-color: #fff;
+  width: 0%;
+}
+
+/* LEFT SIDE HEADING AND MAIN BUTTONS */
+.formHeader {
+  text-align: center;
+  font-size: 30px;
+  margin: 0 0 0 0;
+  border: 2px solid #2EE59D;
+  padding: 0px;
+  border-radius: 15px;
+  background-color: #2c2c2c;
+}
+
+.helpBtn {
+  text-align: center;
+  padding: 20px;
+}
+
+.helpBtn a {
+  text-decoration: none;
+  color: white;
+}
+
+/* TOTALS SECTION */
+
+#leftSide {
+  width: 50%;
+  color: #fff;
+  padding: 0 20px 20px 20px;
+  margin: 50px 10px 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#solarAllowed,
+#ampsUsed,
+#ampsAvailable,
+#toBottom {
+  padding: 7px 0;
+  width: 200px;
+  background-color: #2EE59D;
+  text-align: center;
+  margin: 20px auto 5px auto;
+  border-radius: 20px;
+  font-family: 'Bebas Neue', cursive;
+  color: #2c2c2c;
+}
+
+#toBottom a {
+  text-decoration: none;
+  color: #2c2c2c;
+}
+
+.numbers h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 15px;
+}
+
+.totalsHeaders {
+  text-align: center;
+  font-size: 25px;
+  margin-top: 3em;
+}
+
+.totalsHeaders h1 {
+  margin: 20px 10px 10px 10px;
+  letter-spacing: 15px;
+}
+
+
+#leftTotals {
+  background-color: none;
+  height: 100%;
+  width: 100%;
+  display: block;
+  margin-top: 150px;
+}
+
+
+/* HELP SECTION - Selectors that will make section appear and disappear */
+#leftHelp {
+  background-color: none;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin-top: 150px;
+}
+
+#leftGeneral {
+  display: none;
+}
+
+#leftBreakers {
+  display: block;
+}
+
+.leftLoads {
+  display: block;
+}
+
+/* NAVBAR for Help  */
+
+.mspPhoto {
+  height: 160px;
+  width: 100px;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 10px;
+  background-image: url(Images/msp.jpg);
+  background-position: center;
+  background-size: 150px;
+}
+
+.mspPhoto:hover {
+  transform: scale(1.1);
+}
+
+.helpInfo {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.helpInfo span {
+  color: #2EE59D;
+  font-weight: 600;
+}
+
+/* HELP SECTION - BREAKERS*/
+
+.breakerImgs div div {
+  height: 6em;
+  width: 6em;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.breakerImgs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.breakerText h5 {
+  text-align: center;
+}
+
+.breakerText div:hover {
+  transform: scale(1.1);
+}
+
+.singlePole {
+  background-image: url(Images/singlePole.jpg);
+  background-position: center;
+  background-size: 90px;
+}
+
+.doublePole {
+  background-image: url(Images/doublePole.jpg);
+  background-position: center;
+  background-size: 90px;
+}
+
+.quad {
+  background-image: url(Images/quad.jpg);
+  background-position: center;
+  background-size: 90px;
+}
+
+.tandem {
+  background-image: url(Images/twin.jpg);
+  background-position: center;
+  background-size: 90px;
+}
+
+/* HELP SECTION - LOADS */
+
+.loadsImgs {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+
+.breakerText1 h5 {
+  text-align: center;
+}
+
+.breakerText1 div:hover {
+  transform: scale(1.1);
+}
+
+.singlePole1 {
+  background-image: url(Images/singlePole.jpg);
+  background-position: center;
+  background-size: 90px;
+  height: 6em;
+  width: 6em;
+  border-radius: 50%;
+}
+
+.doublePole1 {
+  background-image: url(Images/doublePole.jpg);
+  background-position: center;
+  background-size: 90px;
+  height: 6em;
+  width: 6em;
+  border-radius: 50%;
+}
+
+.specialLoad {
+  background-image: url(Images/special.jpg);
+  background-position: center;
+  background-size: 90px;
+  height: 6em;
+  width: 6em;
+  border-radius: 50%;
+}
+
+/* FORM SECTION */
+
+#form {
+  width: 50%;
+  height: fit-content;
+  background-color: #fff;
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+  margin: 50px 50px 50px 10px;
+  position: sticky;
+  top: -200px;
+}
+
+.headingsWrap {
+  display: flex;
+  margin: auto 0;
+  text-align: center;
+  justify-content: center;
+}
+
+.questionMark {
+  margin: 0;
+  margin: auto 10px;
+  padding: 1px 6px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+  color: #2c2c2c;
+}
+
+.questionMark:hover {
+  background-color: #2EE59D;
+  color: #fff;
+}
+
+/* FORM SECTION HEADER HOVER INFO */
+.hovertext {
+  position: relative;
+  margin: 20px 0;
+  color: #2c2c2c;
+}
+
+.hovertext h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 250px;
+  background-color: #2c2c2c;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  /* border: 2px solid #2EE59D; */
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+  text-decoration: none;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.generalInfo input {
+  margin: 10px;
+}
+
+
+
+/* Style for submit and reset button */
+.wrap {
+  margin: 30px 0 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.button {
+  width: 140px;
+  height: 45px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.button:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+#otherInput,
+#otherList,
+#otherInput2,
+#otherList2,
+#otherInput3,
+#otherList3,
+#otherInput4,
+#otherList4,
+#otherInput5,
+#otherList5,
+#heatListNum,
+#heatInput1,
+#heatList1,
+#heatInput2,
+#heatList2 {
+  margin: 5px;
+}
+
+select {
+  height: 25px;
+  width: 250px;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 0;
+}
+
+input {
+  height: 25px;
+  width: 250px;
+  padding: 0;
+  margin: 0;
+  border-radius: 12px;
+  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.1);
+  border: 0;
+  text-align: center;
+}
+
+/* Give spacing for Number of breakers in heat section */
+.heat {
+  margin: 0 0 10px 0;
+}
+
+#heatListNum {
+  width: 180px;
+  margin-left: 20px;
+}
+
+/* General section style - make it so all 3 will be side by side */
+#input01,
+#input02,
+#input03 {
+  width: 170px;
+}
+
+.triangle {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 30em solid #fff;
+  border-left: 50em solid transparent;
+  z-index: -5;
+}
+
+footer {
+  margin: 0 0 0 20px;
+  color: #fff;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover {
+  color: #2EE59D;
+}
+
+
+/* PRINTING SECTION */
+#printing {
+  display: none;
+  font-family: Consolas;
+}
+
+#calculator {
+  display: block;
+}
+
+.printingContainer {
+  margin: 0 8em;
+  color: #2c2c2c;
+  font-weight: bold;
+}
+
+.printingContainer h4 {
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+.printingContainer p {
+  font-size: 8px;
+}
+
+.printHeading h3 {
+  text-align: center;
+}
+
+.boxContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2em 0 2em 0;
+}
+
+.breakerBox img,
+.mspBox img {
+  width: auto;
+  height: 200px;
+}
+
+.backBtn {
+  position: fixed;
+  top: 2em;
+  left: 3em;
+}
+
+.printBtn {
+  position: fixed;
+  top: 5em;
+  left: 3em;
+}
+
+.backBtn:hover,
+.printBtn:hover {
+  color: #2EE59D;
+  transform: scale(1.5);
+}
+
+#printBtn,
+#imageButton,
+#chooseFile,
+#chooseFile1 {
+  margin: 0 auto 2em auto;
+  width: 8em;
+  height: 3em;
+  font-family: 'Roboto', sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+#imageButton {
+  width: 14em;
+}
+
+#imageButton:hover {
+  background-color: #2EE59D;
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+#printBtn:hover {
+  background-color: #2EE59D;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* PRINT INPUTS -- BREAKER LABELS */
+#printNames {
+  border-radius: 0;
+  border: none;
+  height: 2em;
+  width: 10em;
+  font-size: 8px;
+  box-shadow: none;
+}
+
+#boxContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#boxContainer p,
+#boxContainer img {
+  text-align: center;
+  margin: 0 auto;
+}
+
+#chooseFile,
+#chooseFile1 {
+  border-radius: 0;
+  box-shadow: none;
+  width: 20em;
+}
+
+.imgUploads {
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+  margin: 0;
+}
+
+.imgBtn button {
+  margin: 0 auto;
+  width: 5em;
+  height: 1.5em;
+  font-size: 9px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  outline: none;
+}
+
+#toBottom {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  #wrapper {
+    display: block;
+  }
+
+  #leftSide,
+  #form {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .triangle {
+    display: none;
+  }
+
+  .formHeader {
+    padding: .01em 1em;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .formHeader h1 {
+    font-size: 25px;
+  }
+
+  .heading {
+    width: 80%;
+    position: static;
+    text-align: center;
+  }
+
+  .headingWrap {
+    width: 100%;
+    background-color: #2c2c2c;
+    margin: 1em auto;
+    margin-right: 0;
+
+  }
+
+  #leftTotals {
+    margin: -3em auto -3em auto;
+  }
+
+  .breakerImgs,
+  .loadsImgs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .breakerText,
+  .breakerText1 {
+    margin: 0 auto;
+  }
+
+  #wrapper {
+    margin: 0 auto;
+  }
+
+  #toBottom {
+    display: block;
+    background-color: #2c2c2c;
+  }
+
+  #toBottom a {
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 2px 4px;
+    border-radius: 5px;
+  }
+}
