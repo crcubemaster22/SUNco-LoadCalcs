@@ -31,7 +31,7 @@ const heatAcArray = [0];
 
 function submitClicked() {
 
-
+    let get = "document.getElementById";
     //LINE ONE DECLARED VARIABLES//
     let otherUserPicked = document.getElementById("otherList").value;
     let otherBreaker = parseInt(document.getElementById("otherInput").value);
@@ -52,6 +52,30 @@ function submitClicked() {
     let otherUserPicked5 = document.getElementById("otherList5").value;
     let otherBreaker5 = parseInt(document.getElementById("otherInput5").value);
     let otherLine5;
+    //LINE SIX DECLARED VARIABLES//
+    let otherUserPicked6 = document.getElementById("otherList6").value;
+    let otherBreaker6 = parseInt(document.getElementById("otherInput6").value);
+    let otherLine6;
+    //LINE SEVEN DECLARED VARIABLES//
+    let otherUserPicked7 = document.getElementById("otherList7").value;
+    let otherBreaker7 = parseInt(document.getElementById("otherInput7").value);
+    let otherLine7;
+    //LINE EIGHT DECLARED VARIABLES//
+    let otherUserPicked8 = document.getElementById("otherList8").value;
+    let otherBreaker8 = parseInt(document.getElementById("otherInput8").value);
+    let otherLine8;
+    //LINE NINE DECLARED VARIABLES//
+    let otherUserPicked9 = document.getElementById("otherList9").value;
+    let otherBreaker9 = parseInt(document.getElementById("otherInput9").value);
+    let otherLine9;
+    //LINE TEN DECLARED VARIABLES//
+    let otherUserPicked10 = document.getElementById("otherList10").value;
+    let otherBreaker10 = parseInt(document.getElementById("otherInput10").value);
+    let otherLine10;
+
+    let derate = document.getElementById("print16.1").value;
+
+
     //PRINTING//
 
 
@@ -144,15 +168,62 @@ function submitClicked() {
     //Line 5 If - Other
     if (otherUserPicked5 == 'one') {
         otherLine5 = otherBreaker5 * .8 * 120;
-
-    } else if (otherUserPicked5 == 'two') {
+    } else if (otherUserPicked5 == 'two1') {
         otherLine5 = otherBreaker5 * .8 * 240;
-
     } else {
         otherLine5 = 0;
-
     }
-    let otherTotal = otherLine1 + otherLine2 + otherLine3 + otherLine4 + otherLine5;
+    //Line 6 If - Other
+    if (otherUserPicked6 == 'one') {
+        otherLine6 = otherBreaker6 * .8 * 120;
+
+    } else if (otherUserPicked5 == 'two') {
+        otherLine6 = otherBreaker6 * .8 * 240;
+
+    } else {
+        otherLine6 = 0;
+    }
+    //Line 7 If - Other
+    if (otherUserPicked7 == 'one') {
+        otherLine7 = otherBreaker7 * .8 * 120;
+
+    } else if (otherUserPicked5 == 'two') {
+        otherLine7 = otherBreaker7 * .8 * 240;
+
+    } else {
+        otherLine7 = 0;
+    }
+    //Line 8 If - Other
+    if (otherUserPicked8 == 'one') {
+        otherLine8 = otherBreaker8 * .8 * 120;
+
+    } else if (otherUserPicked8 == 'two') {
+        otherLine8 = otherBreaker8 * .8 * 240;
+
+    } else {
+        otherLine8 = 0;
+    }
+    //Line 9 If - Other
+    if (otherUserPicked9 == 'one') {
+        otherLine9 = otherBreaker9 * .8 * 120;
+
+    } else if (otherUserPicked9 == 'two') {
+        otherLine9 = otherBreaker9 * .8 * 240;
+
+    } else {
+        otherLine9 = 0;
+    }
+    //Line 10 If - Other
+    if (otherUserPicked10 == 'one') {
+        otherLine10 = otherBreaker10 * .8 * 120;
+
+    } else if (otherUserPicked10 == 'two') {
+        otherLine10 = otherBreaker10 * .8 * 240;
+
+    } else {
+        otherLine10 = 0;
+    }
+    let otherTotal = otherLine1 + otherLine2 + otherLine3 + otherLine4 + otherLine5 + otherLine6 + otherLine7 + otherLine8 + otherLine9 + otherLine10;
 
     //General Information//
     //This grabs the value inputed in the form box and stores it in the variable//
@@ -220,7 +291,22 @@ function submitClicked() {
         document.getElementById("print02.1").innerHTML = 0;
     }
 
+    if (finalTotal > 0.001 && finalTotal < 100) {
+        document.getElementById("derate").innerHTML = "You can safely derate to 100A";
+    } else if (finalTotal > 100 && finalTotal < 150) {
+        document.getElementById("derate").innerHTML = "You can safely derate to 150A";
+    } else if (finalTotal >= 150 && finalTotal <= 175) {
+        document.getElementById("derate").innerHTML = "You can safely derate to 175A";
+    } else if (finalTotal > 175 && finalTotal <= 200) {
+        document.getElementById("derate").innerHTML = "You can safely derate to 200A";
+    } else {
+        document.getElementById("derate").innerHTML = "A derate is not possible";
+    }
 
+
+
+
+    document.getElementById("proposedBreaker").innerHTML = document.getElementById("input04").value;
     document.getElementById("print03").innerHTML = heatTotal2;
     document.getElementById("print03.1").innerHTML = heatTotal2;
     document.getElementById("print04").innerHTML = finalMath;
@@ -228,11 +314,29 @@ function submitClicked() {
     document.getElementById("print05.1").innerHTML = lightsTotal;
     document.getElementById("print06").innerHTML = smallInput;
     document.getElementById("print06.1").innerHTML = smallTotal01;
+    // OTHER OUTPUTS
     document.getElementById("print08.1").innerHTML = otherLine1;
     document.getElementById("print09.1").innerHTML = otherLine2;
     document.getElementById("print10.1").innerHTML = otherLine3;
     document.getElementById("print11.1").innerHTML = otherLine4;
     document.getElementById("print12.1").innerHTML = otherLine5;
+    document.getElementById("print20").innerHTML = otherLine6;
+    document.getElementById("print21").innerHTML = otherLine7;
+    document.getElementById("print22").innerHTML = otherLine8;
+    document.getElementById("print23").innerHTML = otherLine9;
+    document.getElementById("print24").innerHTML = otherLine10;
+    // LABELS
+    document.getElementById("label1").innerHTML = document.getElementById("otherLabel1").value;
+    document.getElementById("label2").innerHTML = document.getElementById("otherLabel2").value;
+    document.getElementById("label3").innerHTML = document.getElementById("otherLabel3").value;
+    document.getElementById("label4").innerHTML = document.getElementById("otherLabel4").value;
+    document.getElementById("label5").innerHTML = document.getElementById("otherLabel5").value;
+    document.getElementById("label6").innerHTML = document.getElementById("otherLabel6").value;
+    document.getElementById("label7").innerHTML = document.getElementById("otherLabel7").value;
+    document.getElementById("label8").innerHTML = document.getElementById("otherLabel8").value;
+    document.getElementById("label9").innerHTML = document.getElementById("otherLabel9").value;
+    document.getElementById("label10").innerHTML = document.getElementById("otherLabel10").value;
+
     document.getElementById("print13").innerHTML = otherTotal;
     document.getElementById("print14").innerHTML = remain1;
     document.getElementById("print14.1").innerHTML = remain2;
@@ -246,13 +350,26 @@ function submitClicked() {
     document.getElementById("print18.2").innerHTML = maxSolar;
     document.getElementById("print19").innerHTML = maxSolar;
 
+
+    if (maxSolar > parseInt(document.getElementById("input04").value)) {
+        document.getElementById("greaterLess").innerHTML = "greater than";
+    } else {
+        document.getElementById("greaterLess").innerHTML = "less than";
+    }
+
+    if (document.getElementById("otherInput2").value == "") {
+        document.getElementByClass("labelWrap2").style.display = none;
+    } else {
+        document.getElementById("printing").style.color = blue;
+    }
+
 }
 
 
 function printClicked() {
     document.getElementById("printing").style.display = "block";
     document.getElementById("calculator").style.display = "none";
-    document.body.style.backgroundColor = 'white';
+    document.body.style.backgroundColor = '#2c2c2c';
 }
 
 function backClicked() {

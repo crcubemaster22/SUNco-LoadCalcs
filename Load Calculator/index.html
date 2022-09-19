@@ -134,7 +134,7 @@
                 the biggest breaker you can find. Make sure you do not include this breaker again in the Specials Loads
                 Section.
               </p>
-              <p><span>Breaker Labels:</span> Breakers Labels will be located right next to the breakers or on a labels
+              <p><span>BREAKER LABELS:</span> Breakers Labels will be located right next to the breakers or on a labels
                 sheet on the Main Service Panel Door.
               </p>
             </div>
@@ -150,11 +150,12 @@
           </div>
           <input id="input01" type="text" placeholder="MSP rating" title="MSP">
           <input id="input02" type="text" placeholder="Main Breaker Rating">
-          <input id="input03" type="text" placeholder="Home Square Footage"><br>
+          <input id="input03" type="text" placeholder="Home Square Footage">
+          <input id="input04" type="text" placeholder="Proposed PV Breaker">
         </div>
         <div class="heat">
           <div class="headingsWrap">
-            <span class="hovertext" data-hover="Enter ONLY the largest heater breaker! If none, leave blank!">
+            <span class="hovertext" data-hover="Enter ONLY the largest heater breaker! If there are none, leave blank!">
               <h4>HEATERS</h4>
             </span>
           </div>
@@ -167,7 +168,7 @@
         </div>
 
 
-        <input id="heatInput1" type="text" placeholder="Combined Breaker Size">
+        <input id="heatInput1" type="text" placeholder="Largest Breaker Size">
         <select name="list" id="heatList1" accesskey="target">
           <option value="none">Pick an option</option>
           <option value="one">Single Pole</option>
@@ -179,7 +180,7 @@
             <h4>AC UNITS</h4>
           </span>
         </div>
-        <input id="heatInput2" type="text" placeholder="Combined Breaker Size">
+        <input id="heatInput2" type="text" placeholder="Largest Breaker Size">
         <select name="list" id="heatList2" accesskey="target">
           <option value="none">Pick an option</option>
           <option value="one">Single Pole</option>
@@ -192,27 +193,31 @@
             <h4>SMALL LOADS</h4>
           </span>
         </div>
-        <input id="input10" type="text" placeholder="Number of Small Loads"><br>
+        <input id="input10" type="text" placeholder="# of Small Loads"><br>
         <div class="headingsWrap">
           <span class="hovertext"
             data-hover="Enter every breaker that is larger than 25A. DO NOT re-enter any breakers you used in the Heater & AC Units section!">
             <h4>SPECIAL LOADS</h4>
           </span>
         </div>
+        <input id="otherLabel1" type="text" placeholder="Label">
         <input id="otherInput" type="text" placeholder="Breaker Size">
         <select name="list" id="otherList" accesskey="target">
           <option value="none">Pick an option</option>
           <option value="one">Single Pole</option>
           <option value="two">Double Pole</option>
         </select><br>
+        <div class="otherLine2">
+          <input id="otherLabel2" type="text" placeholder="Label">
+          <input id="otherInput2" type="text" placeholder="Breaker Size">
+          <select name="list" id="otherList2" accesskey="target">
+            <option value="none">Pick an option</option>
+            <option value="one">Single Pole</option>
+            <option value="two">Double Pole</option>
+          </select><br>
+        </div>
 
-        <input id="otherInput2" type="text" placeholder="Breaker Size">
-        <select name="list" id="otherList2" accesskey="target">
-          <option value="none">Pick an option</option>
-          <option value="one">Single Pole</option>
-          <option value="two">Double Pole</option>
-        </select><br>
-
+        <input id="otherLabel3" type="text" placeholder="Label">
         <input id="otherInput3" type="text" placeholder="Breaker Size">
         <select name="list" id="otherList3" accesskey="target">
           <option value="none">Pick an option</option>
@@ -220,6 +225,7 @@
           <option value="two">Double Pole</option>
         </select><br>
 
+        <input id="otherLabel4" type="text" placeholder="Label">
         <input id="otherInput4" type="text" placeholder="Breaker Size">
         <select name="list" id="otherList4" accesskey="target">
           <option value="none">Pick an option</option>
@@ -227,27 +233,72 @@
           <option value="two">Double Pole</option>
         </select><br>
 
+        <input id="otherLabel5" type="text" placeholder="Label">
         <input id="otherInput5" type="text" placeholder="Breaker Size">
         <select name="list" id="otherList5" accesskey="target">
           <option value="none">Pick an option</option>
           <option value="one">Single Pole</option>
+          <option value="two1">Double Pole</option>
+        </select>
+        <br>
+
+        <input id="otherLabel6" type="text" placeholder="Label">
+        <input id="otherInput6" type="text" placeholder="Breaker Size">
+        <select name="list" id="otherList6" accesskey="target">
+          <option value="none">Pick an option</option>
+          <option value="one">Single Pole</option>
           <option value="two">Double Pole</option>
         </select>
+        <br>
+
+        <input id="otherLabel7" type="text" placeholder="Label">
+        <input id="otherInput7" type="text" placeholder="Breaker Size">
+        <select name="list" id="otherList7" accesskey="target">
+          <option value="none">Pick an option</option>
+          <option value="one">Single Pole</option>
+          <option value="two">Double Pole</option>
+        </select>
+        <br>
+
+        <input id="otherLabel8" type="text" placeholder="Label">
+        <input id="otherInput8" type="text" placeholder="Breaker Size">
+        <select name="list" id="otherList8" accesskey="target">
+          <option value="none">Pick an option</option>
+          <option value="one">Single Pole</option>
+          <option value="two">Double Pole</option>
+        </select>
+        <br>
+
+        <input id="otherLabel9" type="text" placeholder="Label">
+        <input id="otherInput9" type="text" placeholder="Breaker Size">
+        <select name="list" id="otherList9" accesskey="target">
+          <option value="none">Pick an option</option>
+          <option value="one">Single Pole</option>
+          <option value="two">Double Pole</option>
+        </select>
+        <br>
+
+        <input id="otherLabel10" type="text" placeholder="Label">
+        <input id="otherInput10" type="text" placeholder="Breaker Size">
+        <select name="list" id="otherList10" accesskey="target">
+          <option value="none">Pick an option</option>
+          <option value="one">Single Pole</option>
+          <option value="two">Double Pole</option>
+        </select>
+        <br>
+
+
+
         <div class="wrap">
           <input class="button" type=button value="Submit" onclick="submitClicked()" />
           <input class="button" type=button value="Reset" onclick="window.location.reload();" />
           <input class="button" type=button value="Print" onclick="printClicked();" />
         </div>
-        <footer>
-          <h6>Designed by <i><a href="https://blackburndesignstudio.com/">BlackburnDesignStudio</a></i></h6>
-        </footer>
       </section>
     </form>
   </section>
   <!-- PRINTING SECTION -->
   <section id="printing">
-    <div class="backBtn" onclick="backClicked();"><i class="fa-solid fa-chevron-left"></i></div>
-    <div class="printBtn" onclick="window.print()"><i class="fa-solid fa-print"></i></div>
     <div class="printingContainer">
       <div class="printHeading">
         <h3>NEC LOADS - OPTIONAL CALCULATION</h3>
@@ -269,12 +320,40 @@
         </p>
 
         <p><b>Special loads: 220.82(B)(3-4)</b></p>
-        <p><input id="printNames" type="text" placeholder="---breaker label---"> = <span id="print08.1"></span> VA
-        </p>
-        <p><input id="printNames" type="text" placeholder="---breaker label---"> = <span id="print09.1"></span> VA</p>
-        <p><input id="printNames" type="text" placeholder="---breaker label---"> = <span id="print10.1"></span> VA</p>
-        <p><input id="printNames" type="text" placeholder="---breaker label---"> = <span id="print11.1"></span> VA</p>
-        <p><input id="printNames" type="text" placeholder="---breaker label---"> = <span id="print12.1"></span> VA</p>
+        <div class="labelWrap1">
+          <p><span id="label1"></span> = <span id="print08.1"></span> VA
+          </p>
+        </div>
+        <div class="labelWrap2">
+          <p><span id="label2"></span> = <span id="print09.1"></span> VA</p>
+        </div>
+        <div class="labelWrap3">
+          <p><span id="label3"></span> = <span id="print10.1"></span> VA</p>
+        </div>
+        <div class="labelWrap4">
+          <p><span id="label4"></span> = <span id="print11.1"></span> VA</p>
+        </div>
+        <div class="labelWrap5">
+          <p><span id="label5"></span> = <span id="print12.1"></span> VA</p>
+        </div>
+        <div class="labelWrap6">
+          <p><span id="label6"></span> = <span id="print20"></span> VA</p>
+        </div>
+        <div class="labelWrap7">
+          <p><span id="label7"></span> = <span id="print21"></span> VA</p>
+        </div>
+        <div class="labelWrap8">
+          <p><span id="label8"></span> = <span id="print22"></span> VA</p>
+        </div>
+        <div class="labelWrap9">
+          <p><span id="label9"></span> = <span id="print23"></span> VA</p>
+        </div>
+        <div class="labelWrap10">
+          <p><span id="label10"></span> = <span id="print24"></span> VA</p>
+        </div>
+
+
+
         <p><b>Subtotal = <span id="print13"></span> VA</b></p>
         <h4>Applying Demand Factors: 220.82(B)</h4>
         <p>First 10,000 VA x 100% = 10,000 VA</p>
@@ -282,13 +361,15 @@
         <p><b>Total = <span id="print15"></span> VA</b></p>
         <p>VA to Amps Conversion = Total VA / 240 V</p>
         <p><b>Total Usage = <span id="print16"></span> / 240 = <span id="print16.1"></span>A</b></p>
+        <p><span id="derate"></span></p>
         <h4>PV SYSTEM INTERCONNECTION CALCULATION - "120% RULE" NEC 705.12(D)(2)</h4>
         <p>The Maximum Amperage allowed by
           NEC into the Main Panel = Main Panel Busbar Rating x 120%</p>
         <p><span id="print17"></span> x 120% = <span id="print17.1"></span>A</p>
         <p>The Max Solar Allowance = The Maximum Amperage Allowed - The Main Breaker Rating</p>
         <p><span id="print18"></span> - <span id="print18.1"></span> = <span id="print18.2"></span>A</p>
-        <p><b>Therefore, the Max PV System Breaker would be <span id="print19"></span>A</b></p>
+        <p><b>Therefore, the Max Solar Allowance would be <span id="print19"></span>A</b>, which is <span
+            id="greaterLess"></span> the proposed PV Breaker <span id="proposedBreaker"></span>A</p>
         <div class="imgUploads">
           <div id="boxContainer">
             <div class="panelImg">
@@ -315,17 +396,21 @@
           @media print {
 
             .imgBtn,
-            .printBtn,
-            .backBtn {
+            .printButtons {
               visibility: hidden;
             }
 
           }
         </style>
-        <script id="print.js"></script>
-
       </div>
+    </div>
+    <div class="printButtons">
+      <button class="backBtn" onclick="backClicked();">Back</button>
+      <button class="printBtn" onclick="window.print()">Print</button>
+    </div>
   </section>
+
+
   <script src="main.js"></script>
 
 </body>
