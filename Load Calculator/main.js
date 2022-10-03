@@ -293,20 +293,59 @@ function submitClicked() {
 
     if (finalTotal > 0.001 && finalTotal < 100) {
         document.getElementById("derate").innerHTML = "You can safely derate to 100A";
+        document.getElementById("derate1").innerHTML = 100;
+        document.getElementById("derate2").innerHTML = 100;
+        document.getElementById("maxSolar3").innerHTML = maxAmp - 100;
+        document.getElementById("maxSolar4").innerHTML = maxAmp - 100;
     } else if (finalTotal > 100 && finalTotal < 150) {
         document.getElementById("derate").innerHTML = "You can safely derate to 150A";
+        document.getElementById("derate1").innerHTML = 150;
+        document.getElementById("derate2").innerHTML = 150;
+        document.getElementById("maxSolar3").innerHTML = maxAmp - 150;
+        document.getElementById("maxSolar4").innerHTML = maxAmp - 150;
     } else if (finalTotal >= 150 && finalTotal <= 175) {
         document.getElementById("derate").innerHTML = "You can safely derate to 175A";
+        document.getElementById("derate1").innerHTML = 175;
+        document.getElementById("derate2").innerHTML = 175;
+        document.getElementById("maxSolar3").innerHTML = maxAmp - 175;
+        document.getElementById("maxSolar4").innerHTML = maxAmp - 175;
     } else if (finalTotal > 175 && finalTotal <= 200) {
         document.getElementById("derate").innerHTML = "You can safely derate to 200A";
+        document.getElementById("derate1").innerHTML = 200;
+        document.getElementById("derate2").innerHTML = 200;
+        document.getElementById("maxSolar3").innerHTML = maxAmp - 200;
+        document.getElementById("maxSolar4").innerHTML = maxAmp - 200;
     } else {
         document.getElementById("derate").innerHTML = "A derate is not possible";
+    }
+
+    // This will hide what id is not needed for the pv calcs info on print page
+    proposedPV = document.getElementById("input04").value;
+    if (proposedPV >= maxSolar) {
+        document.getElementById("yesDerate").style.display = "block";
+        document.getElementById("noDerate").style.display = "none";
+    } else {
+        document.getElementById("yesDerate").style.display = "none";
+        document.getElementById("noDerate").style.display = "block";
     }
 
 
 
 
     document.getElementById("proposedBreaker").innerHTML = document.getElementById("input04").value;
+    document.getElementById("proposedBreaker1").innerHTML = document.getElementById("input04").value;
+    document.getElementById("proposedBreaker2").innerHTML = document.getElementById("input04").value;
+    document.getElementById("proposedBreaker3").innerHTML = document.getElementById("input04").value;
+    document.getElementById("mainBreaker").innerHTML = document.getElementById("input02").value;
+    document.getElementById("mainBreaker1").innerHTML = document.getElementById("input02").value;
+    document.getElementById("mainBreaker2").innerHTML = document.getElementById("input02").value;
+    document.getElementById("maxAmp").innerHTML = maxAmp
+    document.getElementById("maxSolar").innerHTML = maxSolar
+    document.getElementById("maxSolar1").innerHTML = maxSolar
+    document.getElementById("maxSolar2").innerHTML = maxSolar
+    document.getElementById("busbar").innerHTML = mspRating
+    document.getElementById("busbar1").innerHTML = mspRating
+    document.getElementById("busbar2").innerHTML = mspRating
     document.getElementById("print03").innerHTML = heatTotal2;
     document.getElementById("print03.1").innerHTML = heatTotal2;
     document.getElementById("print04").innerHTML = finalMath;
@@ -325,6 +364,97 @@ function submitClicked() {
     document.getElementById("print22").innerHTML = otherLine8;
     document.getElementById("print23").innerHTML = otherLine9;
     document.getElementById("print24").innerHTML = otherLine10;
+    // IF statements for hiding unused special loads inputs on print page
+    if (otherLine1 == 0) {
+        document.getElementById("labelWrap1").style.display = "none";
+    } else {
+        document.getElementById("labelWrap1").style.display = "block";
+    }
+    if (otherLine2 == 0) {
+        document.getElementById("labelWrap2").style.display = "none";
+    } else {
+        document.getElementById("labelWrap2").style.display = "block";
+    }
+
+    if (otherLine3 == 0) {
+        document.getElementById("labelWrap3").style.display = "none";
+    } else {
+        document.getElementById("labelWrap3").style.display = "block";
+    }
+
+    if (otherLine4 == 0) {
+        document.getElementById("labelWrap4").style.display = "none";
+    } else {
+        document.getElementById("labelWrap4").style.display = "block";
+    }
+
+    if (otherLine5 == 0) {
+        document.getElementById("labelWrap5").style.display = "none";
+    } else {
+        document.getElementById("labelWrap5").style.display = "block";
+    }
+
+    if (otherLine6 == 0) {
+        document.getElementById("labelWrap6").style.display = "none";
+    } else {
+        document.getElementById("labelWrap6").style.display = "block";
+    }
+
+    if (otherLine7 == 0) {
+        document.getElementById("labelWrap7").style.display = "none";
+    } else {
+        document.getElementById("labelWrap7").style.display = "block";
+    }
+
+    if (otherLine8 == 0) {
+        document.getElementById("labelWrap8").style.display = "none";
+    } else {
+        document.getElementById("labelWrap8").style.display = "block";
+    }
+
+    if (otherLine9 == 0) {
+        document.getElementById("labelWrap9").style.display = "none";
+    } else {
+        document.getElementById("labelWrap9").style.display = "block";
+    }
+
+    if (otherLine10 == 0) {
+        document.getElementById("labelWrap10").style.display = "none";
+    } else {
+        document.getElementById("labelWrap10").style.display = "block";
+    }
+
+    if (document.getElementById("otherLabel1").value == 0) {
+        document.getElementById("otherLabel1").value = "Unlabeled Breaker";
+    }
+    if (document.getElementById("otherLabel2").value == 0) {
+        document.getElementById("otherLabel2").value = "Unlabeled Breaker";
+    }
+    if (document.getElementById("otherLabel3").value == 0) {
+        document.getElementById("otherLabel3").value = "Unlabeled Breaker";
+    }
+    if (document.getElementById("otherLabel4").value == 0) {
+        document.getElementById("otherLabel4").value = "Unlabeled Breaker";
+    }
+    if (document.getElementById("otherLabel5").value == 0) {
+        document.getElementById("otherLabel5").value = "Unlabeled Breaker";
+    }
+    if (document.getElementById("otherLabel6").value == 0) {
+        document.getElementById("otherLabel6").value = "Unlabeled Breaker";
+    }
+    if (document.getElementById("otherLabel7").value == 0) {
+        document.getElementById("otherLabel7").value = "Unlabeled Breaker";
+    }
+    if (document.getElementById("otherLabel8").value == 0) {
+        document.getElementById("otherLabel8").value = "Unlabeled Breaker";
+    }
+    if (document.getElementById("otherLabel9").value == 0) {
+        document.getElementById("otherLabel9").value = "Unlabeled Breaker";
+    }
+    if (document.getElementById("otherLabel10").value == 0) {
+        document.getElementById("otherLabel10").value = "Unlabeled Breaker";
+    }
+
     // LABELS
     document.getElementById("label1").innerHTML = document.getElementById("otherLabel1").value;
     document.getElementById("label2").innerHTML = document.getElementById("otherLabel2").value;
@@ -349,25 +479,11 @@ function submitClicked() {
     document.getElementById("print18.1").innerHTML = mainRating;
     document.getElementById("print18.2").innerHTML = maxSolar;
     document.getElementById("print19").innerHTML = maxSolar;
-
-
-    if (maxSolar > parseInt(document.getElementById("input04").value)) {
-        document.getElementById("greaterLess").innerHTML = "greater than";
-    } else {
-        document.getElementById("greaterLess").innerHTML = "less than";
-    }
-
-    if (document.getElementById("otherInput2").value == "") {
-        document.getElementByClass("labelWrap2").style.display = none;
-    } else {
-        document.getElementById("printing").style.color = blue;
-    }
-
 }
 
 
 function printClicked() {
-    document.getElementById("printing").style.display = "block";
+    document.getElementById("printing").style.display = "grid";
     document.getElementById("calculator").style.display = "none";
     document.body.style.backgroundColor = '#2c2c2c';
 }
@@ -378,9 +494,10 @@ function backClicked() {
     document.body.style.backgroundColor = '#2c2c2c';
 }
 
-
 var img = document.getElementById("image");
 var img1 = document.getElementById("image1");
+document.getElementById("chooseFile").onchange = function () { setImage() };
+document.getElementById("chooseFile1").onchange = function () { setImage1() };
 
 function setImage() {
     const files = document.getElementById("chooseFile").files;
@@ -404,3 +521,4 @@ function setImage1() {
         img1.src = reader.result;
     };
 }
+console.log(document.getElementById("otherInput2").value);
