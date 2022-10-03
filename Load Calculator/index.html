@@ -299,114 +299,125 @@
   </section>
   <!-- PRINTING SECTION -->
   <section id="printing">
-    <div class="printingContainer">
-      <div class="printHeading">
-        <h3>NEC LOADS - OPTIONAL CALCULATION</h3>
-      </div>
-      <div class="print1">
-        <h4>1. HEATING or AC: 220.82(C)(1-6)</h4>
-        <p>Heating Units (3 or less) = <span id="print01"></span> VA x 65% = <span id="print01.1"></span> VA</p>
-        <p>Heating Units (4 or more) = <span id="print02"></span> VA x 40% = <span id="print02.1"></span> VA</p>
-        <p>AC Units = <span id="print03"></span> VA x 100% = <span id="print03.1"></span> VA</p>
-        <p><b>Largest Load: <span id="print04"></span> VA</b></p>
-      </div>
-      <div class="print2">
-        <h4>2. GENERAL LOADS: 220.82(B)(1-4)</h4>
-        <p><b>General Lighting: 220.82(B)(1)</b> = <span id="print05"></span>sq ft x 3 VA = <span id="print05.1"></span>
-          VA
-        </p>
-        <p><b>Small Appliance and laundry loads: 220.82(B)(2)</b> = 1500 VA x <span id="print06"></span> circuits =
-          <span id="print06.1"></span> VA
-        </p>
-
-        <p><b>Special loads: 220.82(B)(3-4)</b></p>
-        <div class="labelWrap1">
-          <p><span id="label1"></span> = <span id="print08.1"></span> VA
-          </p>
-        </div>
-        <div class="labelWrap2">
-          <p><span id="label2"></span> = <span id="print09.1"></span> VA</p>
-        </div>
-        <div class="labelWrap3">
-          <p><span id="label3"></span> = <span id="print10.1"></span> VA</p>
-        </div>
-        <div class="labelWrap4">
-          <p><span id="label4"></span> = <span id="print11.1"></span> VA</p>
-        </div>
-        <div class="labelWrap5">
-          <p><span id="label5"></span> = <span id="print12.1"></span> VA</p>
-        </div>
-        <div class="labelWrap6">
-          <p><span id="label6"></span> = <span id="print20"></span> VA</p>
-        </div>
-        <div class="labelWrap7">
-          <p><span id="label7"></span> = <span id="print21"></span> VA</p>
-        </div>
-        <div class="labelWrap8">
-          <p><span id="label8"></span> = <span id="print22"></span> VA</p>
-        </div>
-        <div class="labelWrap9">
-          <p><span id="label9"></span> = <span id="print23"></span> VA</p>
-        </div>
-        <div class="labelWrap10">
-          <p><span id="label10"></span> = <span id="print24"></span> VA</p>
-        </div>
-
-
-
-        <p><b>Subtotal = <span id="print13"></span> VA</b></p>
-        <h4>Applying Demand Factors: 220.82(B)</h4>
-        <p>First 10,000 VA x 100% = 10,000 VA</p>
-        <p>Remaining (Subtotal - 10,000VA) = <span id="print14"></span> VA x 40% = <span id="print14.1"></span> VA</p>
-        <p><b>Total = <span id="print15"></span> VA</b></p>
-        <p>VA to Amps Conversion = Total VA / 240 V</p>
-        <p><b>Total Usage = <span id="print16"></span> / 240 = <span id="print16.1"></span>A</b></p>
-        <p><span id="derate"></span></p>
-        <h4>PV SYSTEM INTERCONNECTION CALCULATION - "120% RULE" NEC 705.12(D)(2)</h4>
-        <p>The Maximum Amperage allowed by
-          NEC into the Main Panel = Main Panel Busbar Rating x 120%</p>
-        <p><span id="print17"></span> x 120% = <span id="print17.1"></span>A</p>
-        <p>The Max Solar Allowance = The Maximum Amperage Allowed - The Main Breaker Rating</p>
-        <p><span id="print18"></span> - <span id="print18.1"></span> = <span id="print18.2"></span>A</p>
-        <p><b>Therefore, the Max Solar Allowance would be <span id="print19"></span>A</b>, which is <span
-            id="greaterLess"></span> the proposed PV Breaker <span id="proposedBreaker"></span>A</p>
-        <div class="imgUploads">
-          <div id="boxContainer">
-            <div class="panelImg">
-              <p>Main Breaker</p>
-              <img id="image" src="" width="auto" height="250px">
-            </div>
-            <div class="imgBtn">
-              <input type="file" id="chooseFile" /><br>
-              <button id="imageButton" onclick="setImage()">Show Image</button>
-            </div>
-          </div>
-          <div id="boxContainer">
-            <div class="panelImg">
-              <p>Main Service Panel</p>
-              <img id="image1" src="" width="auto" height="250px">
-            </div>
-            <div class="imgBtn">
-              <input type="file" id="chooseFile1" /><br>
-              <button id="imageButton" onclick="setImage1()">Show Image</button>
-            </div>
-          </div>
-        </div>
-        <style>
-          @media print {
-
-            .imgBtn,
-            .printButtons {
-              visibility: hidden;
-            }
-
-          }
-        </style>
-      </div>
-    </div>
     <div class="printButtons">
-      <button class="backBtn" onclick="backClicked();">Back</button>
-      <button class="printBtn" onclick="window.print()">Print</button>
+      <button id="backBtn" onclick="backClicked();">Back</button>
+      <button id="printBtn" onclick="window.print()">Print</button>
+    </div>
+    <div class="printingContainer">
+      <div class="printing_left">
+        <div class="printHeading">
+          <h3>NEC LOAD CALCULATION</h3>
+        </div>
+        <div class="print1">
+          <h4>1. HEATING or AC: 220.82(C)(1-6)</h4>
+          <p>Heating Units (3 or less) = <span id="print01"></span> VA x 65% = <span id="print01.1"></span> VA</p>
+          <p>Heating Units (4 or more) = <span id="print02"></span> VA x 40% = <span id="print02.1"></span> VA</p>
+          <p>AC Units = <span id="print03"></span> VA x 100% = <span id="print03.1"></span> VA</p>
+          <p class="bolder"><b>Largest Load: <span id="print04"></span> VA</b></p>
+        </div>
+        <div class="print2">
+          <h4>2. GENERAL LOADS: 220.82(B)(1-4)</h4>
+          <p>General Lighting: 220.82(B)(1) = <span id="print05"></span>sq ft x 3 VA = <span id="print05.1"></span>
+            VA
+          </p>
+          <p>Small Appliance and laundry loads: 220.82(B)(2) = 1500 VA x <span id="print06"></span> circuits =
+            <span id="print06.1"></span> VA
+          </p>
+
+          <p>Special loads: 220.82(B)(3-4)</p>
+          <div id="labelWrap1">
+            <p id="testing"><span id="label1"></span> = <span id="print08.1"></span> VA
+            </p>
+          </div>
+          <div id="labelWrap2">
+            <p><span id="label2"></span> = <span id="print09.1"></span> VA</p>
+          </div>
+          <div id="labelWrap3">
+            <p><span id="label3"></span> = <span id="print10.1"></span> VA</p>
+          </div>
+          <div id="labelWrap4">
+            <p><span id="label4"></span> = <span id="print11.1"></span> VA</p>
+          </div>
+          <div id="labelWrap5">
+            <p><span id="label5"></span> = <span id="print12.1"></span> VA</p>
+          </div>
+          <div id="labelWrap6">
+            <p><span id="label6"></span> = <span id="print20"></span> VA</p>
+          </div>
+          <div id="labelWrap7">
+            <p><span id="label7"></span> = <span id="print21"></span> VA</p>
+          </div>
+          <div id="labelWrap8">
+            <p><span id="label8"></span> = <span id="print22"></span> VA</p>
+          </div>
+          <div id="labelWrap9">
+            <p><span id="label9"></span> = <span id="print23"></span> VA</p>
+          </div>
+          <div id="labelWrap10">
+            <p><span id="label10"></span> = <span id="print24"></span> VA</p>
+          </div>
+          <p class="bolder">Subtotal = <span id="print13"></span> VA</p>
+          <h4>Applying Demand Factors: 220.82(B)</h4>
+          <p>First 10,000 VA x 100% = 10,000 VA</p>
+          <p>Remaining (Subtotal - 10,000VA) = <span id="print14"></span> VA x 40% = <span id="print14.1"></span> VA</p>
+          <p>Total = <span id="print15"></span> VA</p>
+          <p>VA to Amps Conversion = Total VA / 240 V</p>
+          <p class="bolder"><b>Total Usage = <span id="print16"></span> / 240 = <span id="print16.1"></span>A</b></p>
+          <p class="bolder"><span id="derate"></span></p>
+          <h4>PV SYSTEM INTERCONNECTION CALCULATION - "120% RULE" NEC 705.12(D)(2)</h4>
+          <div id="noDerate">
+            <p>Formula: Main Panel Busbar Rating x 120% - Main Breaker Rating</p>
+            <p>Current Panel Rating: <span id="print17"></span>A/<span
+                id="mainBreaker"></span>A&emsp;&emsp;&emsp;&emsp;&emsp; Proposed PV Breaker:
+              <span id="proposedBreaker"></span>A
+            </p>
+            <p><span id="busbar"></span>A (busbar rating) x 1.2 = <span id="print17.1"></span>A - <span
+                id="mainBreaker1"></span>A (main breaker) = <span id="maxSolar"></span>A (solar allowance)
+            </p>
+            <p><span id="maxSolar1"></span>A (solar allowance) > <span id="proposedBreaker1"></span>A (proposed PV
+              breaker)
+            </p>
+            <p>120% Rule: OKAY</p>
+          </div>
+
+
+          <div id="yesDerate">
+            <p>Formula: Main Panel Busbar Rating x 120% - Main Breaker Rating</p>
+            <p>Current Panel Rating: <span id="busbar1"></span>A/<span
+                id="mainBreaker2"></span>A&emsp;&emsp;&emsp;&emsp;&emsp;
+              Allowing <span id="maxSolar2"></span>A of back feed
+            <p>Proposed PV Breaker: <span id="proposedBreaker2"></span>A&emsp;&emsp;&emsp;&emsp;&emsp; Derated Main
+              Breaker: <span id="derate1"></span>A</p>
+            </p>
+            <p><span id="busbar2"></span>A (busbar rating) x 1.2 = <span id="maxAmp"></span>A - <span
+                id="derate2"></span>A (new main breaker) = <span id="maxSolar3"></span>A (solar allowance)</p>
+            <p><span id="maxSolar4"></span>A (solar allowance) > <span id="proposedBreaker3"></span>A (proposed PV
+              breaker)</p>
+            <p>120% Rule: OKAY</p>
+
+          </div>
+        </div>
+      </div>
+      <div class="imgUploads">
+        <div id="boxContainer">
+          <div class="panelImg">
+            <p>Main Breaker</p>
+            <img id="image" src="" width="auto" height="250px">
+          </div>
+          <div class="imgBtn">
+            <input type="file" id="chooseFile" /><br>
+          </div>
+        </div><br>
+        <div id="boxContainer">
+          <div class="panelImg">
+            <p>Main Service Panel</p>
+            <img id="image1" src="" width="auto" height="250px">
+          </div>
+          <div class="imgBtn">
+            <input type="file" id="chooseFile1" /><br>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
