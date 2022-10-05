@@ -321,7 +321,7 @@ function submitClicked() {
 
     // This will hide what id is not needed for the pv calcs info on print page
     proposedPV = document.getElementById("input04").value;
-    if (proposedPV >= maxSolar) {
+    if (proposedPV > maxSolar) {
         document.getElementById("yesDerate").style.display = "block";
         document.getElementById("noDerate").style.display = "none";
     } else {
@@ -467,7 +467,7 @@ function submitClicked() {
     document.getElementById("label9").innerHTML = document.getElementById("otherLabel9").value;
     document.getElementById("label10").innerHTML = document.getElementById("otherLabel10").value;
 
-    document.getElementById("print13").innerHTML = otherTotal;
+    document.getElementById("print13").innerHTML = mainTotals;
     document.getElementById("print14").innerHTML = remain1;
     document.getElementById("print14.1").innerHTML = remain2;
     document.getElementById("print15").innerHTML = remain2;
