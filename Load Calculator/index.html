@@ -131,8 +131,11 @@
               </p>
               <p><span>AC UNITS:</span> These are also labeled on the MSP Panel. If the breakers are not labeled then
                 use
-                the biggest breaker you can find. Make sure you do not include this breaker again in the Specials Loads
-                Section.
+                the biggest breaker you can find. If you have multiple AC Units, use the biggest one for the AC Units
+                section, and use the other(s) in the special loads section. If all loads are small loads then leave the
+                AC Units section blank. Make sure
+                you do not include this breaker again in the Specials Loads
+                Section!
               </p>
               <p><span>BREAKER LABELS:</span> Breakers Labels will be located right next to the breakers or on a labels
                 sheet on the Main Service Panel Door.
@@ -144,7 +147,8 @@
       <section id="form">
         <div class="generalInfo">
           <div class="headingsWrap">
-            <span class="hovertext" data-hover="Enter the General Info here!">
+            <span class="hovertext"
+              data-hover='Enter the General Info here! If you are not interconnecting with a PV Breaker, leave "Proposed PV Breaker" field blank'>
               <h4>GENERAL</h4>
             </span>
           </div>
@@ -176,7 +180,7 @@
         </select><br>
         <div class="headingsWrap">
           <span class="hovertext"
-            data-hover="Enter ONLY the largest AC breaker! If you can't find one, enter the largest breaker you can find! DO NOT re-enter this breaker in the Special Loads Section! ">
+            data-hover="Enter the largest breaker labeled AC! If there are no breakers labeled “AC” refer to the HEAT/AC UNITS section below">
             <h4>AC UNITS</h4>
           </span>
         </div>
@@ -189,7 +193,7 @@
 
         <div class="headingsWrap">
           <span class="hovertext"
-            data-hover="Count the number of breakers that are 25A or less and enter the total here!">
+            data-hover="Count the number of breakers that are 25A or less and enter the total here! Enter at least 3 in this field">
             <h4>SMALL LOADS</h4>
           </span>
         </div>
@@ -361,8 +365,8 @@
           <p>First 10,000 VA x 100% = 10,000 VA</p>
           <p>Remaining (Subtotal - 10,000VA) = <span id="print14"></span> VA x 40% = <span id="print14.1"></span> VA</p>
           <p>Total = <span id="print15"></span> VA</p>
-          <p>VA to Amps Conversion = Total VA / 240 V</p>
-          <p class="bolder"><b>Total Usage = <span id="print16"></span> / 240 = <span id="print16.1"></span>A</b></p>
+          <p>VA to Amps Conversion = Total VA (<span id="print16"></span>) / 240 V</p>
+          <p class="bolder"><b>Total Usage = <span id="print16.1"></span>A</b></p>
           <p class="bolder"><span id="derate"></span></p>
           <h4>PV SYSTEM INTERCONNECTION CALCULATION - "120% RULE" NEC 705.12(D)(2)</h4>
           <div id="noDerate">
