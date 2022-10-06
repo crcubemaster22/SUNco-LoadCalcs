@@ -363,15 +363,17 @@
           <p class="bolder">Subtotal = <span id="print13"></span> VA</p>
           <h4>Applying Demand Factors: 220.82(B)</h4>
           <p>First 10,000 VA x 100% = 10,000 VA</p>
-          <p>Remaining (Subtotal - 10,000VA) = <span id="print14"></span> VA x 40% = <span id="print14.1"></span> VA</p>
-          <p>Total = <span id="print15"></span> VA</p>
-          <p>VA to Amps Conversion = Total VA (<span id="print16"></span>) / 240 V</p>
-          <p class="bolder"><b>Total Usage = <span id="print16.1"></span>A</b></p>
+          <p>Remaining (Subtotal - 10,000VA) = <span id="print14"></span> VA x 40% = <span id="print14.1"></span> VA +
+            10000 VA = <span id="print15.1"></span>VA</p>
+          <p>Total = <span id="print15"></span> VA + <span id="print16.3"></span> VA</p>
+          <p>VA to Amps Conversion = Total VA / 240 V</p>
+          <p class="bolder"><span id="print16.1"></p>
+          <p class="bolder"><b>Total Usage = <span id="usageT"></span>A</b></p>
           <p class="bolder"><span id="derate"></span></p>
           <h4>PV SYSTEM INTERCONNECTION CALCULATION - "120% RULE" NEC 705.12(D)(2)</h4>
           <div id="noDerate">
             <p>Formula: Main Panel Busbar Rating x 120% - Main Breaker Rating</p>
-            <p>Current Panel Rating: <span id="print17"></span>A/<span
+            <p>Current Panel Rating: <span id="busbar5"></span>A/<span
                 id="mainBreaker"></span>A&emsp;&emsp;&emsp;&emsp;&emsp; Proposed PV Breaker:
               <span id="proposedBreaker"></span>A
             </p>
@@ -398,7 +400,16 @@
             <p><span id="maxSolar4"></span>A (solar allowance) > <span id="proposedBreaker3"></span>A (proposed PV
               breaker)</p>
             <p>120% Rule: OKAY</p>
-
+          </div>
+          <div id="noProposedBreaker">
+            <p>Formula: Main Panel Busbar Rating x 120% - Main Breaker Rating</p>
+            <p>Current Panel Rating: <span id="busbar4"></span>A/<span id="mainBreaker3"></span>A
+            </p>
+            <p><span id="busbar3"></span>A (busbar rating) x 1.2 = <span id="maxAmp1"></span>A - <span
+                id="mainBreaker4"></span>A (main breaker) = <span id="maxSolar6"></span>A (solar allowance)
+            </p>
+            <p>Solar Allowance = <span id="maxSolar5"></span>A
+            </p>
           </div>
         </div>
       </div>
