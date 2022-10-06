@@ -24,6 +24,8 @@ let percent;
 let max_val;
 let remain1;
 let remain2;
+let remain3;
+let remain4;
 let heatPrint1;
 let maxAmp;
 let get = "document.getElementById";
@@ -265,9 +267,12 @@ function submitClicked() {
     finalTotal = (((mainTotals - 10000) * .4 + 10000) + finalMath) / 240;
     remain1 = mainTotals - 10000;
     remain2 = (mainTotals - 10000) * .4;
+    remain3 = (mainTotals - 10000) * .4 + 10000;
+    remain4 = ((mainTotals - 10000) * .4 + 10000) + finalMath;
 
     rounded = Math.round(finalTotal);
     ampA = mainRating - rounded;
+    document.getElementById("usageT").innerHTML = rounded;
 
     document.getElementById("ampsUsed").innerHTML = Math.round(finalTotal) + "A";
     document.getElementById("ampsAvailable").innerHTML = ampA + "A";
@@ -324,9 +329,15 @@ function submitClicked() {
     if (proposedPV > maxSolar) {
         document.getElementById("yesDerate").style.display = "block";
         document.getElementById("noDerate").style.display = "none";
+        document.getElementById("noProposedBreaker").style.display = "none";
+    } else if (proposedPV == 0) {
+        document.getElementById("yesDerate").style.display = "none";
+        document.getElementById("noDerate").style.display = "none";
+        document.getElementById("noProposedBreaker").style.display = "block";
     } else {
         document.getElementById("yesDerate").style.display = "none";
         document.getElementById("noDerate").style.display = "block";
+        document.getElementById("noProposedBreaker").style.display = "none";
     }
 
 
@@ -339,16 +350,27 @@ function submitClicked() {
     document.getElementById("mainBreaker").innerHTML = document.getElementById("input02").value;
     document.getElementById("mainBreaker1").innerHTML = document.getElementById("input02").value;
     document.getElementById("mainBreaker2").innerHTML = document.getElementById("input02").value;
-    document.getElementById("maxAmp").innerHTML = maxAmp
-    document.getElementById("maxSolar").innerHTML = maxSolar
-    document.getElementById("maxSolar1").innerHTML = maxSolar
-    document.getElementById("maxSolar2").innerHTML = maxSolar
-    document.getElementById("busbar").innerHTML = mspRating
-    document.getElementById("busbar1").innerHTML = mspRating
-    document.getElementById("busbar2").innerHTML = mspRating
+    document.getElementById("mainBreaker3").innerHTML = document.getElementById("input02").value;
+    document.getElementById("mainBreaker4").innerHTML = document.getElementById("input02").value;
+    document.getElementById("maxAmp").innerHTML = maxAmp;
+    document.getElementById("maxAmp1").innerHTML = maxAmp;
+    document.getElementById("maxSolar").innerHTML = maxSolar;
+    document.getElementById("maxSolar1").innerHTML = maxSolar;
+    document.getElementById("maxSolar2").innerHTML = maxSolar;
+    document.getElementById("maxSolar3").innerHTML = maxSolar;
+    document.getElementById("maxSolar4").innerHTML = maxSolar;
+    document.getElementById("maxSolar5").innerHTML = maxSolar;
+    document.getElementById("maxSolar6").innerHTML = maxSolar;
+    document.getElementById("busbar").innerHTML = mspRating;
+    document.getElementById("busbar1").innerHTML = mspRating;
+    document.getElementById("busbar2").innerHTML = mspRating;
+    document.getElementById("busbar3").innerHTML = mspRating;
+    document.getElementById("busbar4").innerHTML = mspRating;
+    document.getElementById("busbar5").innerHTML = mspRating;
     document.getElementById("print03").innerHTML = heatTotal2;
     document.getElementById("print03.1").innerHTML = heatTotal2;
     document.getElementById("print04").innerHTML = finalMath;
+    document.getElementById("print16.3").innerHTML = finalMath;
     document.getElementById("print05").innerHTML = squareFoot;
     document.getElementById("print05.1").innerHTML = lightsTotal;
     document.getElementById("print06").innerHTML = smallInput;
@@ -470,11 +492,15 @@ function submitClicked() {
     document.getElementById("print13").innerHTML = mainTotals;
     document.getElementById("print14").innerHTML = remain1;
     document.getElementById("print14.1").innerHTML = remain2;
-    document.getElementById("print15").innerHTML = remain2;
+    document.getElementById("print15").innerHTML = remain3;
+    document.getElementById("print15.1").innerHTML = remain3;
     document.getElementById("print16").innerHTML = remain2;
-    document.getElementById("print16.1").innerHTML = finalTotal;
+
+    document.getElementById("print16.4").innerHTML = remain4;
     document.getElementById("print17").innerHTML = mspRating;
+    document.getElementById("print17.2").innerHTML = mspRating;
     document.getElementById("print17.1").innerHTML = maxAmp;
+    document.getElementById("print17.3").innerHTML = maxAmp;
     document.getElementById("print18").innerHTML = maxAmp;
     document.getElementById("print18.1").innerHTML = mainRating;
     document.getElementById("print18.2").innerHTML = maxSolar;
